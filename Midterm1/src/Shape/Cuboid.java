@@ -50,13 +50,13 @@ public class Cuboid extends Rectangle{
 	public class SortByVolume implements Comparator<Cuboid>{
 		public int compare(Cuboid a, Cuboid b) {
 			if (a.volume()>b.volume()) {
-				return -1;
+				return 1;
 			}
 			if (a.volume()==b.volume()) {
 				return 0;
 			}
 			else {
-				return 1;
+				return -1;
 			}
 		}
 	}

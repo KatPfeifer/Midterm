@@ -13,14 +13,14 @@ class RectangleTest {
 	}
 
 	@Test
-	public void getiWidthTest() {
+	public void getsetiWidthTest() {
 		Rectangle rect = new Rectangle(2,5);
 		rect.setiWidth(4);
 		assertEquals(4, rect.getiWidth());
 	}
 	
 	@Test
-	public void getiLengthTest() {
+	public void getsetiLengthTest() {
 		Rectangle rect = new Rectangle(2,5);
 		rect.setiLength(16);
 		assertEquals(16, rect.getiLength());
@@ -43,5 +43,19 @@ class RectangleTest {
 		Rectangle rect1 = new Rectangle(2,2);
 		Rectangle rect2 = new Rectangle(4,6);
 		assertEquals(-1,rect1.compareTo(rect2));
+	}
+	
+	@Test
+	public void comparetoTest2() {
+		Rectangle rect1 = new Rectangle(8,10);
+		Rectangle rect2 = new Rectangle(4,6);
+		assertEquals(1,rect1.compareTo(rect2));
+	}
+	
+	@Test
+	public void comparetoTest3() {
+		Rectangle rect1 = new Rectangle(2,2);
+		Rectangle rect2 = new Rectangle(2,2);
+		assertEquals(0,rect1.compareTo(rect2));
 	}
 }
