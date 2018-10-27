@@ -1,7 +1,4 @@
 package Shape;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Cuboid extends Rectangle{
@@ -48,6 +45,6 @@ public class Cuboid extends Rectangle{
 	}
 	
 	public int compareTo(Cuboid c) {
-		return Double.compare(this.area(), c.area());
+		return c.compareTo(this);
 	}
 }
