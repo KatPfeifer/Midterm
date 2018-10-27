@@ -1,6 +1,6 @@
 package Shape;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape implements Comparable<Rectangle>{
 	
 	private int iWidth;
 	private int iLength;

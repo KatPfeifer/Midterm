@@ -1,5 +1,7 @@
 package Shape;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 public class Cuboid extends Rectangle{
@@ -35,29 +37,17 @@ public class Cuboid extends Rectangle{
 	
 	public class SortByArea implements Comparator<Cuboid>{
 		public int compare(Cuboid a, Cuboid b) {
-			if (a.area()>b.area()) {
-				return -1;
-			}
-			if (a.area()==b.area()) {
-				return 0;
-			}
-			else {
-				return 1;
-			}
+			return Double.compare(a.area(), b.area());
 		}
 	}
 	
 	public class SortByVolume implements Comparator<Cuboid>{
 		public int compare(Cuboid a, Cuboid b) {
-			if (a.volume()>b.volume()) {
-				return 1;
-			}
-			if (a.volume()==b.volume()) {
-				return 0;
-			}
-			else {
-				return -1;
-			}
+			return Double.compare(a.volume(), b.volume());
 		}
+	}
+	
+	public int compareTo(Cuboid c) {
+		return Double.compare(this.area(), c.area());
 	}
 }
